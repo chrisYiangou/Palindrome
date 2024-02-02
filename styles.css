@@ -1,9 +1,20 @@
-.center {
+* {
     margin: 0 auto 0 auto;
     text-align: center;
+    /* background-color: #FF6961; */
 }
 
+
+/* 1. Card Styles */
+
+
 .card-width {
-    width: 18rem;
-    background-color: blue;
+    width: 18rem;  
 }
+
+/* 2 General Padding/Margin */
+
+.margin-top-s {
+    margin-top: 5px;
+}
+
