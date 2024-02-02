@@ -22,7 +22,6 @@ const solvePalindrome = () => {
       const removeSpace = (text) => {
         return text.replace(/\s/g, "");
       }
- //First make sure if text area is not null
     const isValid = isTextAreaEmpty(); 
     if (isValid) {
         let answer = ""
