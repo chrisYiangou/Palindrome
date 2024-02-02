@@ -2,8 +2,8 @@
 const inputArea = document.getElementById("text-input");
 const submitButton = document.getElementById("check-btn");
 const resultDiv = document.getElementById("result");
-const historyDiv = document.querySelector("#history")
-const historyButton = document.querySelector("#history-button")
+const historyDiv = document.querySelector("#history");
+const historyButton = document.querySelector("#history-button");
 
 //Functions
 const solvePalindrome = () => {  
@@ -34,7 +34,7 @@ const solvePalindrome = () => {
         const reversedValue = removeSpace(removePunctuation(reverseWord(inputArea.value)));
         if (initialValue === reversedValue) {
             answer = `${inputArea.value} is a palindrome ✅`;
-            resultDiv.innerHTML = answer ;
+            resultDiv.innerHTML = answer;
         } else {
             answer = `${inputArea.value} is not a palindrome ❌`;
             resultDiv.innerHTML = answer;
@@ -46,7 +46,7 @@ const solvePalindrome = () => {
     const showHistory = () => {
         if (!historyDiv.innerHTML) {
             for (let i=0; i < localStorage.length; i++) {
-                const para =document.createElement("p");
+                const para = document.createElement("p");
                 para.innerText = localStorage.getItem(i)
                 historyDiv.appendChild(para);
             }

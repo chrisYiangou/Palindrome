@@ -4,8 +4,13 @@
     /* background-color: #FF6961; */
 }
 
+.content {
+    max-width: 500px;
+    margin: 25vh auto auto auto;
+}
 
-/* 1. Card Styles */
+
+/* 1. Card Styles  */
 
 
 .card-width {
@@ -18,3 +23,10 @@
     margin-top: 5px;
 }
 
+.margin-bottom-s {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-m {
+    margin-bottom: 15px;
+}
