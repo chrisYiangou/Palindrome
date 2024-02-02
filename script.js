@@ -27,7 +27,6 @@ const solvePalindrome = () => {
         let answer = ""
         const initialValue = removeSpace(removePunctuation(inputArea.value));
         const reversedValue = removeSpace(removePunctuation(reverseWord(inputArea.value)));
-        console.log(initialValue, reversedValue);
         if (initialValue === reversedValue) {
             answer = `${inputArea.value} is a palindrome`
             resultDiv.innerHTML = answer ;
