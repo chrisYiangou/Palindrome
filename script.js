@@ -5,6 +5,9 @@ const resultDiv = document.getElementById("result");
 const historyDiv = document.querySelector("#history");
 const historyButton = document.querySelector("#history-button");
 
+//Variables
+let displayHistory = false;
+
 //Functions
 const solvePalindrome = () => {  
     const isTextAreaEmpty = () => {
@@ -44,7 +47,8 @@ const solvePalindrome = () => {
     } 
 
     const showHistory = () => {
-        if (!historyDiv.innerHTML) {
+        displayHistory = !displayHistory;
+        if (!displayHistory) {
             for (let i=0; i < localStorage.length; i++) {
                 const para = document.createElement("p");
                 para.innerText = localStorage.getItem(i)
