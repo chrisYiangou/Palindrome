@@ -27,3 +27,9 @@
 .margin-bottom-m {
     margin-bottom: 15px;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

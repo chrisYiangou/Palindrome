@@ -4,6 +4,7 @@ const submitButton = document.getElementById("check-btn");
 const resultDiv = document.getElementById("result");
 const historyDiv = document.querySelector("#history");
 const historyButton = document.querySelector("#history-button");
+const clearHistoryButton = document.querySelector("#clear-history-button");
 
 //Variables
 let displayHistory = false;
@@ -51,12 +52,17 @@ const solvePalindrome = () => {
         if (!displayHistory) {
             for (let i=0; i < localStorage.length; i++) {
                 const para = document.createElement("p");
-                para.innerText = localStorage.getItem(i)
+                para.innerText = localStorage.getItem(i);
                 historyDiv.appendChild(para);
             }
         } else {
             historyDiv.innerHTML = "";
         }
+    }
+
+    const clearHistory = () => {
+        localStorage.clear();
+        historyDiv.innerHTML = "";
     }
    
 //Query Selectors
@@ -65,5 +71,6 @@ inputArea.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') solvePalindrome();
 });
 historyButton.addEventListener('click', showHistory);
+clearHistoryButton.addEventListener('click', clearHistory);
 
   
